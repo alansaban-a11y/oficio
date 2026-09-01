@@ -5,9 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Homelabor — el bot habla primero con los dos</title>
   <meta name="description" content="No es LinkedIn. Una charla con quien busca y con quien contrata. Si no hay fit, no hay reunión." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<p>Cargando Homelabor… si ves esto, recargá. El sitio completo va en el siguiente commit.</p>
-<script>location.replace('https://alansaban-a11y.github.io/oficio/app.html')</script>
+  <nav class="nav">
+    <span class="brand">Homelabor</span>
+    <a class="btn" href="#app">Empezar la charla</a>
+  </nav>
+  <section class="hero">
+    <h1>El bot habla primero con los dos.</h1>
+    <p class="lead">No es una red social. Es un filtro: pregunta qué buscás y qué pagan, de verdad. Si no hay fit, no hay reunión.</p>
+    <div class="row">
+      <a class="cta" href="#app">Probar ahora</a>
+      <a class="ghost" href="#como">Cómo funciona</a>
+    </div>
+  </section>
+  <section class="block" id="como">
+    <div class="grid three">
+      <div class="card"><h3>1. Charla</h3><p>Candidato o empresa. Preguntas de persona, no un formulario de 30 campos.</p></div>
+      <div class="card"><h3>2. La plata se dice</h3><p>Sin número no hay aviso ni perfil. Se acabó el “sueldo competitivo”.</p></div>
+      <div class="card"><h3>3. Tres, no ochenta</h3><p>Si calza, ves como máximo 3 roles o 3 personas.</p></div>
+    </div>
+  </section>
+  <section class="block">
+    <h2 style="font-weight:500;margin:0 0 16px">Qué cuesta</h2>
+    <div class="grid three">
+      <div class="card"><h3>Buscar laburo</h3><p class="price">Gratis</p><p>El chat y el perfil no se pagan.</p></div>
+      <div class="card"><h3>Contratar · primeras 10</h3><p class="price">$0</p><p>Shortlist de 3 a cambio de un testimonio si sirvió.</p></div>
+      <div class="card"><h3>Después</h3><p class="price">Shortlist + fee</p><p>Si hay contratación, 8–10%. No hay ads.</p></div>
+    </div>
+  </section>
+  <section class="block" id="app">
+    <h2 style="font-weight:500;margin:0 0 8px">La app</h2>
+    <p class="lead" style="font-size:17px">v0.1 — el bot entrevista. El match a mano lo hace Homelabor.</p>
+    <div class="app">
+      <div class="app-h">
+        <p class="brand">Homelabor</p>
+        <p class="fine">El bot habla primero con los dos.</p>
+      </div>
+      <div id="gate">
+        <div class="gate-body">
+          <h3 style="margin:0 0 8px;font-weight:500;font-size:24px">¿Buscás laburo o estás contratando?</h3>
+          <p class="fine" style="margin:0 0 18px">Una charla. Si no hay fit, no hay reunión.</p>
+          <button class="choice" data-role="candidato">Busco laburo<small>Qué querés, dónde y cuánto.</small></button>
+          <button class="choice" data-role="empleador">Estoy contratando<small>El rol y la plata de verdad.</small></button>
+        </div>
+      </div>
+      <div id="chat" class="hidden">
+        <div style="padding:8px 14px 0"><button class="back" id="back" type="button">← empezar de nuevo</button></div>
+        <div id="log"></div>
+        <form id="form">
+          <input id="inp" type="text" autocomplete="off" placeholder="Escribí acá…" />
+          <button class="send" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    Homelabor · 2026 · No somos LinkedIn a propósito.<br />
+    ¿Empresa y querés shortlist 0? Escribí a
+    <a href="mailto:alansaban@gmail.com?subject=Homelabor%20shortlist">alansaban@gmail.com</a>
+  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
